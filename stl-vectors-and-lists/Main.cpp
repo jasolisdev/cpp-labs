@@ -318,25 +318,40 @@ int main()
 
 	// list: const_reference back() const;
 	// (Notice that this back function returns a reference.)
-
-	// list: void clear() noexcept;
+    cout << intList1.back() << endl;
+	
+    // list: void clear() noexcept;
+    intList1.clear();
 
 	// list: bool empty() const noexcept;
 
 	// vector: const_reference front() const;
-
+    
 	// list: iterator insert (const_iterator position, const value_type& val);
 	// (Notice that the insert function returns an iterator.)
+    list<int>::iterator it = intList2.begin();
+    intList2.insert(it, 69);
+    printList(intList2);
 
-	// list: void pop_back();
-
-	// list: void pop_front();
-
-	// list: void push_front (const value_type& val);
-
-	// list: void remove (const value_type& val);
+    // list: void pop_back();
+    intList2.pop_back();
+    printList(intList2);
+	
+    // list: void pop_front();
+    intList2.pop_front();
+    printList(intList2);
+    
+    // list: void push_front (const value_type& val);
+    intList2.push_front(1337);
+    printList(intList2);
+	
+    // list: void remove (const value_type& val);
+    intList2.remove(98);
+    printList(intList2);
 
 	// list: void reverse() noexcept;
+    intList2.reverse(); 
+    printList(intList2);
 
 	// list: void splice (const_iterator position, list& x);
 
